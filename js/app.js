@@ -5,17 +5,55 @@ function alterarStatus(id){
     let nomejogo = gameclicado.querySelector('.dashboard__item__name');
 
 
-    if(botao.innerHTML === 'Alugar'){
-        botao.innerHTML = 'Devolver'
-        botao.style.backgroundColor = '#01080E'
-        img.className = 'dashboard__item__img dashboard__item__img--rented'
+
+    if(img.classList.contains('dashboard__item__img--rented')){
+        img.classList.remove('dashboard__item__img--rented');
+        botao.textContent = 'Alugar'
+        botao.classList.remove('dashboard__item__button--return')
+
+    }else{
+        img.classList.add('dashboard__item__img--rented');
+        botao.classList.add('dashboard__item__button--return');
+        botao.textContent = 'Devolver'
+        botao.classList.add('dashboard__item__button--return')
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     if(botao.innerHTML === 'Alugar'){
+//         botao.innerHTML = 'Devolver'
+//         botao.style.backgroundColor = '#01080E'
+//         img.className = 'dashboard__item__img dashboard__item__img--rented'
         
 
     
-    } else{
-        botao.innerHTML = 'Alugar'
-        botao.style.backgroundColor = '#1875E8'
-        img.className = 'dashboard__item__img'
-    }
+//     } else{
+//         botao.innerHTML = 'Alugar'
+//         botao.style.backgroundColor = '#1875E8'
+//         img.className = 'dashboard__item__img'
+//     }
 
-}
+// }
